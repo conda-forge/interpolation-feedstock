@@ -12,7 +12,7 @@ source:
 
 build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  number: 0
+  number: 1
   skip: True  # [py>35]
 
 requirements:
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/econforge/interpolation.py
-  license: BSD-2
+  license: BSD 2-Clause
   summary: 'Interpolation in Python'
 
 extra:
