@@ -3,7 +3,7 @@ About interpolation
 
 Home: https://github.com/econforge/interpolation.py
 
-Package license: BSD-2
+Package license: BSD 2-Clause
 
 Feedstock license: BSD 3-Clause
 
