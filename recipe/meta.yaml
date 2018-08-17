@@ -1,5 +1,5 @@
-{% set version = "0.1.9" %}
-{% set sha256 = "875fcfeba5064c254520f537b03247a0debec26c5a3e3f69e1c5f108fd52dbe0" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "025107607a7fb1658fda1839ea85812a45d6f61a7cf8cd01ba3ab74265234972" %}
 
 package:
   name: interpolation
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
-  number: 2
+  number: 0
 
 requirements:
   host:
