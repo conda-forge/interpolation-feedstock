@@ -37,9 +37,8 @@ test:
 about:
   home: https://github.com/econforge/interpolation.py
   license: BSD 2-Clause
-  summary: 'Interpolation in Python'
+  summary: Interpolation in Python
 
 extra:
   recipe-maintainers:
-    - albop
     - albop
