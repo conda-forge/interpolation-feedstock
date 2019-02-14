@@ -1,5 +1,5 @@
-{% set version = "2.1.0" %}
-{% set sha256 = "435c5e0fb8ed356fe8ca5b528b5e49e1e4d2f630230f096e9a738122076a8765" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "e65d9f55250522387197130c857f3c729bbbf16b15217a688a60c3d47a76ffe4" %}
 
 package:
   name: interpolation
