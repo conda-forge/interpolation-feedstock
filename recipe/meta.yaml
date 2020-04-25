@@ -16,11 +16,11 @@ build:
 requirements:
   host:
     - pip
-    - python >= 3.6
+    - python >=3.6
     - setuptools
     - poetry
   run:
-    - python >= 3.6
+    - python >=3.6
     - numba
     - numpy
     - pandas
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/econforge/interpolation.py
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_file: COPYING
   summary: Interpolation in Python
 
