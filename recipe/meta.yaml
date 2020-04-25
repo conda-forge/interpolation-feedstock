@@ -1,14 +1,12 @@
-{% set version = "2.1.2" %}
-{% set sha256 = "5a1a69604c2851658e001fb6311ac4d103e37eee301708a3a62d00583f2ccbac" %}
+{% set version = "2.1.4" %}
 
 package:
   name: interpolation
   version: {{ version }}
 
 source:
-  fn: interpolation.py-{{ version }}.tar.gz
-  url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/EconForge/interpolation.py.git
+  git_rev: v{{version}}
 
 build:
   noarch: python
@@ -20,6 +18,7 @@ requirements:
     - pip
     - python>=3.6
     - setuptools
+    - poetry
   run:
     - python>=3.6
     - numba
