@@ -1,5 +1,5 @@
-{% set version = "2.1.2" %}
-{% set sha256 = "5a1a69604c2851658e001fb6311ac4d103e37eee301708a3a62d00583f2ccbac" %}
+{% set version = "2.1.4" %}
+{% set sha256 = "93429987b203f8b5aeed111c8b971abae806179e5bbd92004dfd2e4e3a07a5e3" %}
 
 package:
   name: interpolation
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
@@ -37,6 +37,7 @@ test:
 about:
   home: https://github.com/econforge/interpolation.py
   license: BSD 2-Clause
+  license_file: COPYING
   summary: Interpolation in Python
 
 extra:
