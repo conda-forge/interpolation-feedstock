@@ -21,7 +21,7 @@ requirements:
     - poetry
   run:
     - python >=3.6
-    - numba
+    - numba >=0.49
     - numpy
     - pandas
     - tempita
