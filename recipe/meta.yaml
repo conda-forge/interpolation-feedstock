@@ -1,12 +1,13 @@
-{% set version = "2.1.4" %}
+{% set name = "interpolation" %}
+{% set version = "2.1.5" %}
 
 package:
-  name: interpolation
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  git_url: https://github.com/EconForge/interpolation.py.git
-  git_rev: v{{ version }}
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 9fce6be72229e3d10ddceaa1d964bda20a37df5107dcbe04adb03fc34ebfb14f
 
 build:
   noarch: python
@@ -23,7 +24,6 @@ requirements:
     - python >=3.6
     - numba >=0.49
     - numpy
-    - pandas
     - tempita
     - scipy
 
@@ -36,7 +36,7 @@ test:
 about:
   home: https://github.com/econforge/interpolation.py
   license: BSD-2-Clause
-  license_file: COPYING
+  license_file: LICENSE
   summary: Interpolation in Python
 
 extra:
