@@ -16,9 +16,8 @@ build:
 
 requirements:
   host:
-    - pip
+    - pip ==20.0.2
     - python >=3.6
-    - setuptools
     - poetry
   run:
     - python >=3.6
