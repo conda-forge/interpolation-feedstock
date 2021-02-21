@@ -5,11 +5,9 @@ Home: https://github.com/econforge/interpolation.py
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/interpolation-feedstock/blob/master/LICENSE.txt)
 
 Summary: Interpolation in Python
-
-
 
 Current build status
 ====================
