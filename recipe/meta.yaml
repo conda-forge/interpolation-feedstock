@@ -12,19 +12,19 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip ==20.0.2
-    - python >=3.6
+    - python >=3.6,<3.10
     - poetry
   run:
-    - python >=3.6
+    - python >=3.6,<3.10
     - numba >=0.47
-    - numpy
-    - tempita
-    - scipy
+    - numpy =1.18.1
+    - tempita =0.5.2
+    - scipy =1.4.1
 
 test:
   imports:
