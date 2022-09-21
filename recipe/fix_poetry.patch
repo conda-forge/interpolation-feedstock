@@ -1,0 +1,12 @@
+diff -Naur interpolation-2.2.4_patched/pyproject.toml interpolation-2.2.4/pyproject.toml
+--- interpolation-2.2.4_patched/pyproject.toml	2022-09-21 15:18:55.546254242 -0300
++++ interpolation-2.2.4/pyproject.toml	2022-09-21 15:17:34.872748733 -0300
+@@ -22,7 +22,7 @@
+ packaging = "^21.3"
+ 
+ 
+-[tool.poetry.group.dev.dependencies]
++[tool.poetry.dev-dependencies]
+ python-markdown-math = "^0.8"
+ pytest = "^7.1.3"
+ mypy = "^0.782"
