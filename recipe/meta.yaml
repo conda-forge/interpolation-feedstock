@@ -12,15 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
     - pip ==20.0.2
-    - python >=3.6,<3.10
+    - python >=3.6
     - poetry
   run:
-    - python >=3.6,<3.10
+    - python >=3.6
     - numba >=0.47
     - numpy >=1.18.1
     - tempita >=0.5.2
