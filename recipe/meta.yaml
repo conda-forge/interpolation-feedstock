@@ -1,5 +1,5 @@
 {% set name = "interpolation" %}
-{% set version = "2.2.3" %}
+{% set version = "2.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b7bf6bdc341ec46bc85e1fff7040b7831be30fcccf8f1ef0dc6fa91daf8ace1b
+  sha256: 637aca4c60e862b2d2367b091a179f48d372a6c4277f4eb51856dc58ec93a6dc
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
