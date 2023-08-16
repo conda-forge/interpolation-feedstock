@@ -34,6 +34,10 @@ test:
     - interpolation
     - interpolation.smolyak
     - interpolation.splines
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/econforge/interpolation.py
