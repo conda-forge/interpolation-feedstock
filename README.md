@@ -1,11 +1,11 @@
-About interpolation
-===================
+About interpolation-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/interpolation-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/econforge/interpolation.py
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/interpolation-feedstock/blob/main/LICENSE.txt)
 
 Summary: Interpolation in Python
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@albop](https://github.com/albop/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 

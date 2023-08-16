@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -27,13 +27,17 @@ requirements:
     - numpy >=1.22.2
     - tempita >=0.5.2
     - scipy >=1.4.1
-    - packaging >=21.3
+    - packaging <22.0,>=21.3
 
 test:
   imports:
     - interpolation
     - interpolation.smolyak
     - interpolation.splines
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/econforge/interpolation.py
@@ -44,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - albop
+    - jan-janssen
