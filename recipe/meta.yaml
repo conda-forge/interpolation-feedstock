@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
-  sha256: 637aca4c60e862b2d2367b091a179f48d372a6c4277f4eb51856dc58ec93a6dc
+  sha256: 9a8c98559eac0be67cb129fe68bfa6bddaf37353e517502d911db624179c82ae
 
 build:
   noarch: python
