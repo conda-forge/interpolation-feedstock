@@ -23,6 +23,7 @@ requirements:
     - python >=3.8,<=3.12
     - numba >=0.57
     - scipy >=1.10
+    - packaging <22.0,>=21.3
 
 test:
   imports:
