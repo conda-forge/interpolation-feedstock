@@ -6,15 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
   sha256: 637aca4c60e862b2d2367b091a179f48d372a6c4277f4eb51856dc58ec93a6dc
-  patches:
-    - fix_poetry.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
