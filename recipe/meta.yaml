@@ -1,32 +1,28 @@
 {% set name = "interpolation" %}
-{% set version = "2.2.4" %}
+{% set version = "2.2.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 637aca4c60e862b2d2367b091a179f48d372a6c4277f4eb51856dc58ec93a6dc
-  patches:
-    - fix_poetry.patch
+  url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
+  sha256: 9a8c98559eac0be67cb129fe68bfa6bddaf37353e517502d911db624179c82ae
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - pip ==22.2.2
-    - python >=3.8,<3.11
-    - poetry
+    - pip
+    - python >=3.9,<=3.12
+    - poetry >=1.2
   run:
-    - python >=3.8,<3.11
-    - numba >=0.47
-    - numpy >=1.22.2
-    - tempita >=0.5.2
-    - scipy >=1.4.1
+    - python >=3.8,<=3.12
+    - numba >=0.57
+    - scipy >=1.10
     - packaging <22.0,>=21.3
 
 test:
