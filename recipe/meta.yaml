@@ -1,44 +1,47 @@
-{% set version = "2.1.2" %}
-{% set sha256 = "5a1a69604c2851658e001fb6311ac4d103e37eee301708a3a62d00583f2ccbac" %}
+{% set name = "interpolation" %}
+{% set version = "2.2.5" %}
 
 package:
-  name: interpolation
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: interpolation.py-{{ version }}.tar.gz
   url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 9a8c98559eac0be67cb129fe68bfa6bddaf37353e517502d911db624179c82ae
 
 build:
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
   host:
     - pip
-    - python>=3.6
-    - setuptools
+    - python >=3.9,<=3.12
+    - poetry >=1.2
   run:
-    - python>=3.6
-    - numba
-    - numpy
-    - pandas
-    - tempita
-    - scipy
+    - python >=3.8,<=3.12
+    - numba >=0.57
+    - scipy >=1.10
+    - packaging <22.0,>=21.3
 
 test:
   imports:
     - interpolation
     - interpolation.smolyak
     - interpolation.splines
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/econforge/interpolation.py
-  license: BSD 2-Clause
+  license: BSD-2-Clause
+  license_file: LICENSE
   summary: Interpolation in Python
 
 extra:
   recipe-maintainers:
     - albop
+    - jan-janssen
