@@ -1,5 +1,5 @@
 {% set name = "interpolation" %}
-{% set version = "2.2.6" %}
+{% set version = "2.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/EconForge/interpolation.py/archive/v{{ version }}.tar.gz
-  sha256: e8383c6fb291034b803d09f947cbb3a8eac1d5e98b9d6f1b067b05ea6e6f9368
+  sha256: 35a7da36a5ff61e69a7f2321dff40c6c20282749c1e43564db86dbc8324d6bbf
 
 build:
   noarch: python
@@ -21,8 +21,8 @@ requirements:
     - poetry >=1.2
   run:
     - python >=3.9,<=3.12
-    - numba >=0.59
-    - scipy >=1.10
+    - numba >=0.59.1
+    - scipy >=1.10.0,<2.0.0
     - packaging <22.0,>=21.3
 
 test:
