@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: interpolation
+  version: 2.2.7
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/EconForge/interpolation.py/archive/v${{ version }}.tar.gz
+  sha256: 35a7da36a5ff61e69a7f2321dff40c6c20282749c1e43564db86dbc8324d6bbf
+
+build:
+  number: 3
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - poetry >=1.2
+  run:
+    - python >=${{ python_min }},<3.13a0
+    - numba >=0.59.1
+    - scipy >=1.10.0,<2.0.0
+    - packaging >=21.3
+
+tests:
+  - python:
+      imports:
+        - interpolation
+        - interpolation.smolyak
+        - interpolation.splines
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  license: BSD-2-Clause
+  license_file: LICENSE
+  summary: Interpolation in Python
+  homepage: https://github.com/econforge/interpolation.py
+
+extra:
+  recipe-maintainers:
+    - albop
+    - jan-janssen
